@@ -17,6 +17,7 @@ var myRequest = {
     headers: mheaders,
     body: body
 };
+delete myRequest.headers['clientTraceId'];
 
 $task.fetch(myRequest).then(response => {
     console.log(response.statusCode + "\n\n" + response.body);
