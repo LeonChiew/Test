@@ -1,3 +1,6 @@
 console.log("----------------");
-console.log($request.headers);
+let obj = JSON.parse($response.body);
+
+let body = JSON.stringify(obj);
+console.log(body)
 $done($response.body);
